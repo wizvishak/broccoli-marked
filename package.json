@@ -1,5 +1,5 @@
 {
-  "name": "broccoli-coffee",
+  "name": "broccoli-marked",
   "description": "A Markdown filter for Broccoli using Christopher Jeffrey's fast \"marked\" parser and compiler",
   "version": "0.0.1",
   "author": "Ben Fletcher <bjfletcher@gmail.com>",
