@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bjfletcher/broccoli-marked.png?branch=master)](https://travis-ci.org/bjfletcher/broccoli-marked)
 
-A Markdown filter for Broccoli using Christopher Jeffrey's fast Markdown parser and compiler [Marked](//github.com/chjj/marked).  This plugin is too built for speed through doing the parsing and compiling asynchronously. You can ask for code highlighting too (see [Code Highlighting](#code-highlighting)) which uses [highlight.js](//github.com/isagalaev/highlight.js).
+A Markdown filter for Broccoli using Christopher Jeffrey's fast Markdown parser and compiler [Marked](//github.com/chjj/marked).  This plugin is too built for speed through doing the parsing and compiling asynchronously. You can ask for code highlighting too using [highlight.js](//github.com/isagalaev/highlight.js) (see [Code Highlighting](#code-highlighting) below).
 
 ## Installation
 
