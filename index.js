@@ -1,35 +1,41 @@
-'use strict';
+(function(require, module) {
 
-var Filter = require('broccoli-filter');
-var RSVP = require('rsvp');
-var marked = require('marked');
+    'use strict';
 
-function MarkdownFilter(inputTree, options) {
-	if (!(this instanceof MarkdownFilter)) {
-		return new MarkdownFilter(inputTree, options);
-	}
+    var Filter = require('broccoli-filter');
+    var RSVP = require('rsvp');
+    var marked = require('marked');
 
-	this.inputTree = inputTree;
+    function MarkdownFilter(inputTree, options) {
+        if (!(this instanceof MarkdownFilter)) {
+            return new MarkdownFilter(inputTree, options);
+        }
 
-    if (options) marked.setOptions(options);
-}
+        this.inputTree = inputTree;
 
-MarkdownFilter.prototype = Object.create(Filter.prototype);
-MarkdownFilter.prototype.constructor = MarkdownFilter;
+        if (options) {
+            marked.setOptions(options);
+        }
+    }
 
-MarkdownFilter.prototype.extensions = ['md'];
-MarkdownFilter.prototype.targetExtension = 'html';
+    MarkdownFilter.prototype = Object.create(Filter.prototype);
+    MarkdownFilter.prototype.constructor = MarkdownFilter;
 
-MarkdownFilter.prototype.processString = function (markdownString) {
-	return new RSVP.Promise(function (resolve, reject) {
-        marked(markdownString, function (err, content) {
-            if (err) {
-                reject(err);
-            } else {
-                resolve(content);
-            }
-		});
-	});
-};
+    MarkdownFilter.prototype.extensions = ['md'];
+    MarkdownFilter.prototype.targetExtension = 'html';
 
-module.exports = MarkdownFilter;
+    MarkdownFilter.prototype.processString = function (markdownString) {
+        return new RSVP.Promise(function (resolve, reject) {
+            marked(markdownString, function (err, content) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(content);
+                }
+            });
+        });
+    };
+
+    module.exports = MarkdownFilter;
+
+}(window.require, window.module));
