@@ -14,9 +14,12 @@
     "markdown",
     "marked"
   ],
-  "devDependencies": {
+  "dependencies": {
     "broccoli-filter": "^0.1.6",
     "marked": "^0.3.2",
+    "rsvp": "^3.0.18"
+  },
+  "devDependencies": {
     "jshint": "~2.5.0"
   },
   "scripts": {
