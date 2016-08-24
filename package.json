@@ -1,28 +1,29 @@
 {
-  "name": "broccoli-marked",
-  "description": "A Markdown filter for Broccoli using Christopher Jeffrey's fast \"marked\" parser and compiler",
-  "version": "0.0.1",
-  "author": "Ben Fletcher <bjfletcher@gmail.com>",
-  "main": "index.js",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bjfletcher/broccoli-marked"
-  },
-  "keywords": [
-    "broccoli-plugin",
-    "markdown",
-    "marked"
-  ],
-  "dependencies": {
-    "broccoli-filter": "^0.1.6",
-    "marked": "^0.3.2",
-    "rsvp": "^3.0.18"
-  },
-  "devDependencies": {
-    "jshint": "~2.5.0"
-  },
-  "scripts": {
-    "test": "jshint *.js"
-  }
+	"name": "broccoli-marked",
+	"description": "A Markdown filter for Broccoli using Christopher Jeffrey's fast \"marked\" parser and compiler",
+	"version": "0.0.1",
+	"author": "Ben Fletcher <bjfletcher@gmail.com>",
+	"main": "index.js",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/bjfletcher/broccoli-marked"
+	},
+	"keywords": [
+		"broccoli-plugin",
+		"markdown",
+		"marked"
+	],
+	"dependencies": {
+		"broccoli-persistent-filter": "^1.2.11",
+		"marked": "^0.3.6",
+		"rsvp": "^3.2.1"
+	},
+	"devDependencies": {
+		"broccoli-coffee": "^0.6.0"
+	},
+	"scripts": {
+		"compile": "broccoli build lib",
+		"test": "cd tests && rm -rf tmp dist && broccoli build dist"
+	}
 }
