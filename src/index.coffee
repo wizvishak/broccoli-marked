@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 Filter = require 'broccoli-persistent-filter'
 RSVP = require 'rsvp'
