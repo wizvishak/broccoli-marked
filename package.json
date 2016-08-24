@@ -23,7 +23,7 @@
 		"broccoli-coffee": "^0.6.0"
 	},
 	"scripts": {
-		"compile": "broccoli build lib",
+		"compile": "rm -rf lib && broccoli build lib",
 		"test": "cd tests && rm -rf tmp dist && broccoli build dist"
 	}
 }
