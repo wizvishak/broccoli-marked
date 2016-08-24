@@ -20,11 +20,12 @@
 		"rsvp": "^3.2.1"
 	},
 	"devDependencies": {
+		"broccoli": "^0.16.9",
 		"broccoli-coffee": "^0.6.0",
 		"ember-cli-coffeescript": "^1.14.0"
 	},
 	"scripts": {
 		"compile": "rm -rf lib && broccoli build lib",
-		"test": "cd tests && rm -rf tmp dist && broccoli build dist"
+		"test": "cd test && rm -rf tmp dist && broccoli build dist"
 	}
 }

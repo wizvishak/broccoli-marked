@@ -1,6 +1,6 @@
 # broccoli-marked
 
-[![Build Status](https://travis-ci.org/bjfletcher/broccoli-marked.png?branch=master)](https://travis-ci.org/bjfletcher/broccoli-marked)
+[![Build Status](https://travis-ci.org/wizvishak/broccoli-marked.png?branch=master)](https://travis-ci.org/wizvishak/broccoli-marked)
 
 > :coffee: Markdown-to-HTML transpiler for [broccoli](https://github.com/joliss/broccoli) nodes.
 Uses [@chjj](//github.com/chjj)'s fast markdown compiler, [marked](//github.com/chjj/marked).
